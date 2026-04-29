@@ -1,5 +1,13 @@
 import { Link } from "react-router-dom";
-import { MessageCircle, ExternalLink, Mail } from "lucide-react";
+import { MessageCircle, Mail } from "lucide-react";
+import { TikTokIcon, InstagramIcon, XIcon, FacebookIcon } from "./SocialIcons";
+
+const socials = [
+  { label: "TikTok", href: "https://www.tiktok.com/@budipurnomocom", icon: <TikTokIcon size={16} /> },
+  { label: "Instagram", href: "https://instagram.com/budipurnomocom", icon: <InstagramIcon size={16} /> },
+  { label: "X", href: "https://x.com/budipurnomoid", icon: <XIcon size={16} /> },
+  { label: "Facebook", href: "https://facebook.com/budipurnomoid", icon: <FacebookIcon size={16} /> },
+];
 
 export function Footer() {
   return (
@@ -19,10 +27,25 @@ export function Footer() {
               />
               <span className="font-bold text-white text-lg">Budi Purnomo</span>
             </div>
-            <p className="text-sm leading-relaxed">
+            <p className="text-sm leading-relaxed mb-5">
               Wartawan senior & konsultan manajemen reputasi. Ahli pemulihan
               citra berbasis <em>Image Restoration Theory</em>.
             </p>
+            <div className="flex items-center gap-2">
+              {socials.map((s) => (
+                <a
+                  key={s.label}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={s.label}
+                  className="flex items-center justify-center w-8 h-8 rounded-lg bg-white/10 text-blue-200 hover:bg-brand-mid hover:text-white transition-colors"
+                  title={s.label}
+                >
+                  {s.icon}
+                </a>
+              ))}
+            </div>
           </div>
 
           {/* Navigasi */}
@@ -40,12 +63,9 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <a
-                  href="#tentang"
-                  className="hover:text-white transition-colors"
-                >
-                  Tentang Kami
-                </a>
+                <Link to="/#tentang" className="hover:text-white transition-colors">
+                  Tentang Saya
+                </Link>
               </li>
             </ul>
           </div>
@@ -72,17 +92,6 @@ export function Footer() {
                 >
                   <Mail size={15} />
                   info@budipurnomo.id
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://id.linkedin.com/in/budipurnomoid"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 hover:text-white transition-colors"
-                >
-                  <ExternalLink size={15} />
-                  LinkedIn
                 </a>
               </li>
             </ul>

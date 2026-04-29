@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import {
   MessageCircle,
-  ExternalLink,
   Award,
   Newspaper,
   Users,
@@ -10,25 +9,50 @@ import {
   Mail,
   Phone,
 } from "lucide-react";
+import { TikTokIcon, InstagramIcon, XIcon, FacebookIcon } from "../components/SocialIcons";
+import { LatestPosts } from "../components/LatestPosts";
+
+const socials = [
+  {
+    label: "TikTok",
+    href: "https://www.tiktok.com/@budipurnomocom",
+    icon: <TikTokIcon size={18} />,
+  },
+  {
+    label: "Instagram",
+    href: "https://instagram.com/budipurnomocom",
+    icon: <InstagramIcon size={18} />,
+  },
+  {
+    label: "X / Twitter",
+    href: "https://x.com/budipurnomoid",
+    icon: <XIcon size={18} />,
+  },
+  {
+    label: "Facebook",
+    href: "https://facebook.com/budipurnomoid",
+    icon: <FacebookIcon size={18} />,
+  },
+];
 
 const experiences = [
   {
     period: "2010 – Sekarang",
     role: "Konsultan Manajemen Reputasi & Komunikasi",
     org: "Independen",
-    desc: "Mengelola manajemen reputasi dan pemulihan citra sejumlah tokoh nasional, pejabat publik, dan figur korporasi menggunakan pendekatan Image Restoration Theory.",
+    desc: "Saya mengelola manajemen reputasi dan pemulihan citra sejumlah tokoh nasional, pejabat publik, dan figur korporasi menggunakan pendekatan Image Restoration Theory.",
   },
   {
     period: "2000 – 2010",
     role: "Jurnalis Senior",
     org: "Media Nasional",
-    desc: "Meliput isu-isu politik, ekonomi, dan sosial di tingkat nasional selama lebih dari satu dekade. Membangun jaringan luas dengan pemangku kepentingan media.",
+    desc: "Saya meliput isu-isu politik, ekonomi, dan sosial di tingkat nasional selama lebih dari satu dekade, sekaligus membangun jaringan luas dengan pemangku kepentingan media.",
   },
   {
     period: "1995 – 2000",
     role: "Reporter & Editor",
     org: "Berbagai Redaksi",
-    desc: "Memulai karier jurnalistik sebagai reporter lapangan, kemudian berkembang menjadi editor untuk liputan khusus dan investigasi.",
+    desc: "Saya memulai karier jurnalistik sebagai reporter lapangan, kemudian berkembang menjadi editor untuk liputan khusus dan investigasi.",
   },
 ];
 
@@ -67,7 +91,6 @@ export function Home() {
     <div className="flex-1">
       {/* ── Hero ── */}
       <section className="relative bg-brand-dark overflow-hidden">
-        {/* Background decoration */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 right-0 w-96 h-96 bg-brand-mid rounded-full -translate-y-1/2 translate-x-1/2" />
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-brand-mid rounded-full translate-y-1/2 -translate-x-1/2" />
@@ -84,11 +107,15 @@ export function Home() {
                 Budi <span className="text-brand-mid">Purnomo</span>
               </h1>
               <p className="text-blue-200 text-lg md:text-xl leading-relaxed mb-8">
-                Wartawan berpengalaman puluhan tahun dan konsultan manajemen
-                reputasi terkemuka. Ahli dalam pemulihan citra tokoh nasional
-                berbasis <em>Image Restoration Theory</em>.
+                Saya adalah wartawan dengan pengalaman puluhan tahun, dan telah
+                mendampingi pemulihan citra sejumlah tokoh nasional. Di sini saya
+                berbagi strategi komunikasi aktual berbasis{" "}
+                <em>Image Restoration Theory</em> — untuk membantu Anda menavigasi
+                krisis reputasi dengan tepat dan terukur.
               </p>
-              <div className="flex flex-wrap gap-3">
+
+              {/* CTA buttons */}
+              <div className="flex flex-wrap gap-3 mb-8">
                 <a
                   href="https://wa.me/6285315557788"
                   target="_blank"
@@ -98,19 +125,35 @@ export function Home() {
                   <MessageCircle size={18} />
                   Konsultasi via WA
                 </a>
-                <a
-                  href="https://id.linkedin.com/in/budipurnomoid"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  to="/blog"
                   className="flex items-center gap-2 px-6 py-3 bg-white/10 text-white rounded-xl font-semibold hover:bg-white/20 transition-colors border border-white/20"
                 >
-                  <ExternalLink size={18} />
-                  LinkedIn
-                </a>
+                  Baca Artikel
+                  <ChevronRight size={18} />
+                </Link>
+              </div>
+
+              {/* Social media */}
+              <div className="flex items-center gap-2 flex-wrap">
+                <span className="text-blue-300 text-sm mr-1">Ikuti saya:</span>
+                {socials.map((s) => (
+                  <a
+                    key={s.label}
+                    href={s.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={s.label}
+                    className="flex items-center justify-center w-9 h-9 rounded-lg bg-white/10 text-blue-200 hover:bg-brand-mid hover:text-white transition-colors border border-white/10"
+                    title={s.label}
+                  >
+                    {s.icon}
+                  </a>
+                ))}
               </div>
             </div>
 
-            {/* Profile photo placeholder */}
+            {/* Profile photo */}
             <div className="flex justify-center md:justify-end">
               <div className="relative">
                 <div className="w-64 h-64 md:w-80 md:h-80 rounded-2xl bg-gradient-to-br from-brand-mid to-brand-dark border-4 border-white/20 overflow-hidden shadow-2xl flex items-center justify-center">
@@ -129,7 +172,6 @@ export function Home() {
                     }}
                   />
                 </div>
-                {/* Badge */}
                 <div className="absolute -bottom-4 -right-4 bg-white rounded-xl px-4 py-2 shadow-xl">
                   <p className="text-brand-dark font-bold text-sm">30+ Tahun</p>
                   <p className="text-gray-500 text-xs">Pengalaman</p>
@@ -154,25 +196,25 @@ export function Home() {
         </div>
       </section>
 
-      {/* ── Tentang Kami ── */}
+      {/* ── Tentang Saya ── */}
       <section id="tentang" className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <span className="inline-block mb-3 px-3 py-1 bg-brand-light text-brand-dark text-sm font-medium rounded-full">
-                Tentang Kami
+                Tentang Saya
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-brand-dark mb-6 leading-tight">
                 Strategi Komunikasi <br />
                 <span className="text-brand-mid">Berbasis Riset & Pengalaman</span>
               </h2>
-              <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                Budi Purnomo adalah wartawan yang berpengalaman puluhan tahun,
-                dan pernah mengelola manajemen reputasi dan pemulihan citra
+              <p className="text-gray-600 text-lg leading-relaxed mb-5">
+                Saya, Budi Purnomo, adalah wartawan yang berpengalaman puluhan
+                tahun, dan pernah mengelola manajemen reputasi dan pemulihan citra
                 sejumlah tokoh nasional.
               </p>
-              <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                Melalui situs ini, ia membagikan solusi dan strategi komunikasi
+              <p className="text-gray-600 text-lg leading-relaxed mb-5">
+                Melalui situs ini, saya membagikan solusi dan strategi komunikasi
                 aktual berdasarkan prinsip-prinsip{" "}
                 <strong className="text-brand-dark">
                   "Image Restoration Theory"
@@ -180,8 +222,8 @@ export function Home() {
                 atau teori pemulihan citra.
               </p>
               <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                Untuk berkonsultasi seputar media dan komunikasi, dapat
-                menghubungi{" "}
+                Untuk berkonsultasi seputar media dan komunikasi, Anda dapat
+                menghubungi saya melalui{" "}
                 <strong className="text-brand-dark">
                   WA Center: 0853-1555-7788
                 </strong>
@@ -224,6 +266,23 @@ export function Home() {
                   <p className="text-sm text-gray-500">Konsultan Komunikasi & Wartawan Senior</p>
                 </div>
               </div>
+              {/* Social in about card */}
+              <div className="flex items-center gap-2 mt-6 pt-6 border-t border-blue-200">
+                <span className="text-gray-500 text-sm">Ikuti:</span>
+                {socials.map((s) => (
+                  <a
+                    key={s.label}
+                    href={s.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={s.label}
+                    className="flex items-center justify-center w-8 h-8 rounded-lg bg-white text-brand-dark hover:bg-brand-mid hover:text-white transition-colors shadow-sm"
+                    title={s.label}
+                  >
+                    {s.icon}
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -237,7 +296,7 @@ export function Home() {
               Layanan
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-brand-dark">
-              Apa yang Kami Tawarkan
+              Apa yang Saya Tawarkan
             </h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -269,12 +328,10 @@ export function Home() {
             </h2>
           </div>
           <div className="relative">
-            {/* Timeline line */}
             <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-brand-light hidden sm:block" />
             <div className="space-y-8">
               {experiences.map((exp, i) => (
                 <div key={i} className="relative sm:pl-16">
-                  {/* dot */}
                   <div className="absolute left-4 top-5 w-4 h-4 rounded-full bg-brand-mid border-2 border-white shadow-md hidden sm:block" />
                   <div className="bg-white rounded-2xl p-6 border border-blue-100 shadow-sm hover:border-brand-mid transition-colors">
                     <span className="inline-block mb-2 px-2.5 py-0.5 bg-brand-light text-brand-dark text-xs font-medium rounded-full">
@@ -291,6 +348,9 @@ export function Home() {
         </div>
       </section>
 
+      {/* ── Artikel Terbaru dari WordPress ── */}
+      <LatestPosts />
+
       {/* ── CTA ── */}
       <section className="py-20 bg-brand-dark relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
@@ -302,10 +362,10 @@ export function Home() {
             Butuh Konsultasi Komunikasi?
           </h2>
           <p className="text-blue-200 text-lg mb-8">
-            Hubungi kami untuk mendiskusikan strategi komunikasi dan pemulihan
-            citra yang tepat untuk situasi Anda.
+            Hubungi saya langsung untuk mendiskusikan strategi komunikasi dan
+            pemulihan citra yang tepat untuk situasi Anda.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-wrap justify-center gap-4 mb-8">
             <a
               href="https://wa.me/6285315557788"
               target="_blank"
@@ -320,8 +380,25 @@ export function Home() {
               className="flex items-center gap-2 px-8 py-3.5 bg-white/10 text-white rounded-xl font-bold hover:bg-white/20 transition-colors border border-white/20 text-lg"
             >
               <Mail size={20} />
-              Email Kami
+              Email Saya
             </a>
+          </div>
+          {/* Social links in CTA */}
+          <div className="flex items-center justify-center gap-3">
+            <span className="text-blue-300 text-sm">Media sosial:</span>
+            {socials.map((s) => (
+              <a
+                key={s.label}
+                href={s.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={s.label}
+                className="flex items-center justify-center w-10 h-10 rounded-xl bg-white/10 text-blue-200 hover:bg-brand-mid hover:text-white transition-colors border border-white/10"
+                title={s.label}
+              >
+                {s.icon}
+              </a>
+            ))}
           </div>
         </div>
       </section>

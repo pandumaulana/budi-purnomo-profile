@@ -37,22 +37,53 @@ const socials = [
 
 const experiences = [
   {
-    period: "2010 – Sekarang",
-    role: "Konsultan Manajemen Reputasi & Komunikasi",
-    org: "Independen",
-    desc: "Saya mengelola manajemen reputasi dan pemulihan citra sejumlah tokoh nasional, pejabat publik, dan figur korporasi menggunakan pendekatan Image Restoration Theory.",
+    period: "2017 – Sekarang",
+    role: "CEO & Founder",
+    org: "PT Fokus Cyber Media · Hallo Media Network",
+    desc: "Saya mendirikan dan memimpin PT Fokus Cyber Media yang menerbitkan Hallo.id sebagai induk jaringan ratusan media siber (Hallo Media Network) yang tersebar dari Sumatera hingga Papua.",
+    badge: "Aktif",
   },
   {
-    period: "2000 – 2010",
-    role: "Jurnalis Senior",
-    org: "Media Nasional",
-    desc: "Saya meliput isu-isu politik, ekonomi, dan sosial di tingkat nasional selama lebih dari satu dekade, sekaligus membangun jaringan luas dengan pemangku kepentingan media.",
+    period: "2013 – Sekarang",
+    role: "Founder",
+    org: "Indonesia Media Center (IMC) · Pusat Siaran Pers Indonesia",
+    desc: "Saya mendirikan IMC yang mengelola Pusat Siaran Pers Indonesia (PSPI) — menerbitkan Pressrelease.co.id, Siaranpers.co.id, Newswire.id, dan mendistribusikan press release ke media internasional di seluruh dunia.",
+    badge: "Aktif",
   },
   {
-    period: "1995 – 2000",
-    role: "Reporter & Editor",
-    org: "Berbagai Redaksi",
-    desc: "Saya memulai karier jurnalistik sebagai reporter lapangan, kemudian berkembang menjadi editor untuk liputan khusus dan investigasi.",
+    period: "2018 – 2019",
+    role: "Wakil Direktur Bidang Media & Komunikasi",
+    org: "Badan Pemenangan Nasional (BPN) Prabowo-Sandiaga",
+    desc: "Saya memimpin strategi komunikasi dan media center tim kampanye Prabowo-Sandi pada Pilpres 2019, mengelola narasi dan relasi media skala nasional.",
+    badge: null,
+  },
+  {
+    period: "2016 – 2017",
+    role: "Dewan Pakar",
+    org: "Tim Pemenangan Anies-Sandi · Pilkada DKI Jakarta",
+    desc: "Saya menjadi bagian dari 17 Dewan Pakar tim pemenangan Anies-Sandi pada Pilkada DKI 2017 — yang akhirnya memenangkan kontestasi tersebut.",
+    badge: null,
+  },
+  {
+    period: "2005 – 2016",
+    role: "Managing Director",
+    org: "Kelompok Media Peluang (KMP)",
+    desc: "Selama 11 tahun lebih saya mengelola grup media yang menerbitkan 8 tabloid dan majalah, termasuk Tabloid Peluang Usaha, Tabloid The Politic, dan Majalah Kebaya.",
+    badge: null,
+  },
+  {
+    period: "2012",
+    role: "Koordinator Media & Komunikasi",
+    org: "Tim Kampanye Jokowi-Basuki · Pilgub DKI Jakarta",
+    desc: "Saya menjadi koordinator media center kampanye Jokowi-Basuki pada Pilgub DKI 2012 — momentum yang melambungkan nama Jokowi ke panggung nasional.",
+    badge: null,
+  },
+  {
+    period: "1989 – 1994",
+    role: "Jurnalis",
+    org: "Pers Daerah · Kelompok Kompas Gramedia",
+    desc: "Karier jurnalistik saya dimulai di jaringan Kompas Gramedia, meliput untuk Harian Surya, Harian Bernas, Harian Serambi Indonesia, dan sejumlah media daerah lainnya.",
+    badge: null,
   },
 ];
 
@@ -334,9 +365,16 @@ export function Home() {
                 <div key={i} className="relative sm:pl-16">
                   <div className="absolute left-4 top-5 w-4 h-4 rounded-full bg-brand-mid border-2 border-white shadow-md hidden sm:block" />
                   <div className="bg-white rounded-2xl p-6 border border-blue-100 shadow-sm hover:border-brand-mid transition-colors">
-                    <span className="inline-block mb-2 px-2.5 py-0.5 bg-brand-light text-brand-dark text-xs font-medium rounded-full">
-                      {exp.period}
-                    </span>
+                    <div className="flex flex-wrap items-center gap-2 mb-2">
+                      <span className="px-2.5 py-0.5 bg-brand-light text-brand-dark text-xs font-medium rounded-full">
+                        {exp.period}
+                      </span>
+                      {exp.badge && (
+                        <span className="px-2.5 py-0.5 bg-green-100 text-green-700 text-xs font-semibold rounded-full">
+                          ● {exp.badge}
+                        </span>
+                      )}
+                    </div>
                     <h3 className="font-bold text-brand-dark text-lg">{exp.role}</h3>
                     <p className="text-brand-mid text-sm font-medium mb-2">{exp.org}</p>
                     <p className="text-gray-600 text-sm leading-relaxed">{exp.desc}</p>

@@ -239,26 +239,40 @@ export function Home() {
                 Strategi Komunikasi <br />
                 <span className="text-brand-mid">Berbasis Riset & Pengalaman</span>
               </h2>
-              <p className="text-gray-600 text-lg leading-relaxed mb-5">
-                Saya, Budi Purnomo, adalah wartawan yang berpengalaman puluhan
-                tahun, dan pernah mengelola manajemen reputasi dan pemulihan citra
-                sejumlah tokoh nasional.
+              <p className="text-gray-600 leading-relaxed mb-4">
+                Sejak kuliah, Budi Purnomo aktif sebagai koresponden berbagai
+                surat kabar, hingga menjadi wartawan profesional di{" "}
+                <strong className="text-brand-dark">Harian Surya</strong>, Pers
+                Daerah Kelompok Kompas Gramedia (1989–1994).
               </p>
-              <p className="text-gray-600 text-lg leading-relaxed mb-5">
-                Melalui situs ini, saya membagikan solusi dan strategi komunikasi
-                aktual berdasarkan prinsip-prinsip{" "}
-                <strong className="text-brand-dark">
-                  "Image Restoration Theory"
-                </strong>{" "}
-                atau teori pemulihan citra.
+              <p className="text-gray-600 leading-relaxed mb-4">
+                Ia kemudian mengelola majalah finansial{" "}
+                <strong className="text-brand-dark">Uang & Efek</strong> yang
+                berubah menjadi <strong className="text-brand-dark">Majalah Investor</strong>{" "}
+                hingga 2000, lalu memimpin majalah investasi mingguan{" "}
+                <strong className="text-brand-dark">Prospektif</strong> hingga
+                2006 — sambil mengelola sejumlah tabloid bisnis dan surat kabar
+                ekonomi hingga 2016.
               </p>
-              <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                Untuk berkonsultasi seputar media dan komunikasi, Anda dapat
-                menghubungi saya melalui{" "}
-                <strong className="text-brand-dark">
-                  WA Center: 0853-1555-7788
-                </strong>
-                .
+              <p className="text-gray-600 leading-relaxed mb-4">
+                Di bidang komunikasi politik, ia dipercaya menjadi{" "}
+                <strong className="text-brand-dark">Koordinator Media Center</strong>{" "}
+                kampanye Jokowi–Basuki (Pilgub DKI 2012), Koordinator Prabowo
+                Media Center (2013), Direktur Media Center Timkamnas
+                Prabowo–Hatta (Pilpres 2014), hingga{" "}
+                <strong className="text-brand-dark">Wakil Direktur Media Center</strong>{" "}
+                Timnas Prabowo–Sandiaga mendampingi Hashim Djojohadikusumo
+                (Pilpres 2018–2019).
+              </p>
+              <p className="text-gray-600 leading-relaxed mb-8">
+                Kini ia aktif membantu korporasi yang mengalami krisis komunikasi,
+                dan mengelola sekitar{" "}
+                <strong className="text-brand-dark">200 portal berita</strong>{" "}
+                melalui{" "}
+                <a href="https://persrilis.com" target="_blank" rel="noopener noreferrer" className="text-brand-mid hover:underline font-medium">Persrilis.com</a>
+                {" "}dan{" "}
+                <a href="https://prorilis.com" target="_blank" rel="noopener noreferrer" className="text-brand-mid hover:underline font-medium">Prorilis.com</a>
+                {" "}— termasuk Hallo.id, Bisnisnews.com, 24jamnews.com, dan Indonesiaraya.co.id — untuk distribusi pers rilis di dalam dan luar negeri.
               </p>
               <div className="flex flex-wrap gap-3">
                 <a

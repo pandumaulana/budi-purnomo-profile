@@ -272,7 +272,12 @@ export function Home() {
                 <a href="https://persrilis.com" target="_blank" rel="noopener noreferrer" className="text-brand-mid hover:underline font-medium">Persrilis.com</a>
                 {" "}dan{" "}
                 <a href="https://prorilis.com" target="_blank" rel="noopener noreferrer" className="text-brand-mid hover:underline font-medium">Prorilis.com</a>
-                {" "}— termasuk Hallo.id, Bisnisnews.com, 24jamnews.com, dan Indonesiaraya.co.id — untuk distribusi pers rilis di dalam dan luar negeri.
+                {" "}— termasuk{" "}
+                <a href="https://hallo.id" target="_blank" rel="noopener noreferrer" className="text-brand-mid hover:underline font-medium">Hallo.id</a>,{" "}
+                <a href="https://bisnisnews.com" target="_blank" rel="noopener noreferrer" className="text-brand-mid hover:underline font-medium">Bisnisnews.com</a>,{" "}
+                <a href="https://24jamnews.com" target="_blank" rel="noopener noreferrer" className="text-brand-mid hover:underline font-medium">24jamnews.com</a>, dan{" "}
+                <a href="https://indonesiaraya.co.id" target="_blank" rel="noopener noreferrer" className="text-brand-mid hover:underline font-medium">Indonesiaraya.co.id</a>{" "}
+                — untuk distribusi pers rilis di dalam dan luar negeri.
               </p>
               <div className="flex flex-wrap gap-3">
                 <a
@@ -428,7 +433,7 @@ export function Home() {
               WhatsApp: 0853-1555-7788
             </a>
             <a
-              href="mailto:info@budipurnomo.id"
+              href="mailto:hallobudipurnomo@gmail.com"
               className="flex items-center gap-2 px-8 py-3.5 bg-white/10 text-white rounded-xl font-bold hover:bg-white/20 transition-colors border border-white/20 text-lg"
             >
               <Mail size={20} />

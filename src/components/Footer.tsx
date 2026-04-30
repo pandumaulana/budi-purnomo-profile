@@ -87,11 +87,11 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:info@budipurnomo.id"
+                  href="mailto:hallobudipurnomo@gmail.com"
                   className="flex items-center gap-2 hover:text-white transition-colors"
                 >
                   <Mail size={15} />
-                  info@budipurnomo.id
+                  hallobudipurnomo@gmail.com
                 </a>
               </li>
             </ul>
@@ -100,7 +100,21 @@ export function Footer() {
 
         <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-blue-300">
           <p>© {new Date().getFullYear()} Budi Purnomo. Hak cipta dilindungi.</p>
-          <p>Strategi komunikasi berbasis <em>Image Restoration Theory</em></p>
+          <div className="flex flex-col sm:flex-row items-center gap-3">
+            <p>Strategi komunikasi berbasis <em>Image Restoration Theory</em></p>
+            <span className="hidden sm:block text-white/20">·</span>
+            <p>
+              In association with{" "}
+              <a
+                href="https://pandumaulana.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-200 hover:text-white underline underline-offset-2 transition-colors"
+              >
+                pandumaulana.com
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </footer>

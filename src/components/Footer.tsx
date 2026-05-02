@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
 import { MessageCircle, Mail } from "lucide-react";
-import { TikTokIcon, InstagramIcon, XIcon, FacebookIcon } from "./SocialIcons";
+import { TikTokIcon, InstagramIcon, XIcon, FacebookIcon, YouTubeIcon } from "./SocialIcons";
 
 const socials = [
   { label: "TikTok", href: "https://www.tiktok.com/@budipurnomocom", icon: <TikTokIcon size={16} /> },
   { label: "Instagram", href: "https://instagram.com/budipurnomocom", icon: <InstagramIcon size={16} /> },
   { label: "X", href: "https://x.com/budipurnomoid", icon: <XIcon size={16} /> },
   { label: "Facebook", href: "https://facebook.com/budipurnomoid", icon: <FacebookIcon size={16} /> },
+  { label: "YouTube", href: "https://youtube.com", icon: <YouTubeIcon size={16} /> },
 ];
 
 export function Footer() {

@@ -64,14 +64,14 @@ function PostCard({ post }: { post: WPPost }) {
 }
 
 export function LatestPosts() {
-  const { posts, loading, error } = usePosts(1, 3);
+  const { posts, loading, error } = usePosts(1, 6);
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-brand-light">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
           <div>
-            <span className="inline-block mb-3 px-3 py-1 bg-brand-light text-brand-dark text-sm font-medium rounded-full">
+            <span className="inline-block mb-3 px-3 py-1 bg-white text-brand-dark text-sm font-medium rounded-full">
               Artikel Terbaru
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-brand-dark">
@@ -80,9 +80,9 @@ export function LatestPosts() {
           </div>
           <Link
             to="/blog"
-            className="flex items-center gap-2 text-brand-mid font-semibold hover:text-brand-dark transition-colors flex-shrink-0"
+            className="flex items-center gap-2 px-5 py-2.5 bg-brand-dark text-white rounded-xl font-semibold hover:bg-blue-900 transition-colors flex-shrink-0"
           >
-            Lihat semua artikel <ArrowRight size={16} />
+            Lihat semua <ArrowRight size={16} />
           </Link>
         </div>
 
@@ -94,21 +94,31 @@ export function LatestPosts() {
         )}
 
         {!loading && error && (
-          <div className="text-center py-12 px-4 bg-brand-light rounded-2xl border border-blue-100">
+          <div className="text-center py-12 px-4 bg-white rounded-2xl border border-blue-100">
             <p className="text-gray-500 mb-2">WordPress belum terhubung.</p>
             <p className="text-sm text-gray-400">
-              Atur <code className="bg-white px-1.5 py-0.5 rounded font-mono text-brand-dark">VITE_WP_URL</code> di file{" "}
-              <code className="bg-white px-1.5 py-0.5 rounded font-mono text-brand-dark">.env</code> untuk menampilkan artikel.
+              Atur <code className="bg-brand-light px-1.5 py-0.5 rounded font-mono text-brand-dark">VITE_WP_URL</code> di file{" "}
+              <code className="bg-brand-light px-1.5 py-0.5 rounded font-mono text-brand-dark">.env</code> untuk menampilkan artikel.
             </p>
           </div>
         )}
 
         {!loading && !error && posts.length > 0 && (
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {posts.map((post) => (
-              <PostCard key={post.id} post={post} />
-            ))}
-          </div>
+          <>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+              {posts.map((post) => (
+                <PostCard key={post.id} post={post} />
+              ))}
+            </div>
+            <div className="text-center">
+              <Link
+                to="/blog"
+                className="inline-flex items-center gap-2 px-8 py-3 bg-brand-dark text-white rounded-xl font-semibold hover:bg-blue-900 transition-colors"
+              >
+                Lihat semua artikel <ArrowRight size={16} />
+              </Link>
+            </div>
+          </>
         )}
       </div>
     </section>

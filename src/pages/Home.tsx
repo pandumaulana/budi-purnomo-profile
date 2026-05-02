@@ -1,15 +1,12 @@
 import { Link } from "react-router-dom";
+import { MessageCircle, ChevronRight, Mail, Phone } from "lucide-react";
 import {
-  MessageCircle,
-  Award,
-  Newspaper,
-  Users,
-  TrendingUp,
-  ChevronRight,
-  Mail,
-  Phone,
-} from "lucide-react";
-import { TikTokIcon, InstagramIcon, XIcon, FacebookIcon } from "../components/SocialIcons";
+  TikTokIcon,
+  InstagramIcon,
+  XIcon,
+  FacebookIcon,
+  YouTubeIcon,
+} from "../components/SocialIcons";
 import { LatestPosts } from "../components/LatestPosts";
 
 const socials = [
@@ -33,80 +30,10 @@ const socials = [
     href: "https://facebook.com/budipurnomoid",
     icon: <FacebookIcon size={18} />,
   },
-];
-
-const experiences = [
   {
-    period: "2017 – Sekarang",
-    role: "CEO & Founder",
-    org: "PT Fokus Cyber Media · Hallo Media Network",
-    desc: "Saya mendirikan dan memimpin PT Fokus Cyber Media yang menerbitkan Hallo.id sebagai induk jaringan ratusan media siber (Hallo Media Network) yang tersebar dari Sumatera hingga Papua.",
-    badge: "Aktif",
-  },
-  {
-    period: "2013 – Sekarang",
-    role: "Founder",
-    org: "Indonesia Media Center (IMC) · Pusat Siaran Pers Indonesia",
-    desc: "Saya mendirikan IMC yang mengelola Pusat Siaran Pers Indonesia (PSPI) — menerbitkan Pressrelease.co.id, Siaranpers.co.id, Newswire.id, dan mendistribusikan press release ke media internasional di seluruh dunia.",
-    badge: "Aktif",
-  },
-  {
-    period: "2018 – 2019",
-    role: "Wakil Direktur Bidang Media & Komunikasi",
-    org: "Badan Pemenangan Nasional (BPN) Prabowo-Sandiaga",
-    desc: "Saya memimpin strategi komunikasi dan media center tim kampanye Prabowo-Sandi pada Pilpres 2019, mengelola narasi dan relasi media skala nasional.",
-    badge: null,
-  },
-  {
-    period: "2016 – 2017",
-    role: "Dewan Pakar",
-    org: "Tim Pemenangan Anies-Sandi · Pilkada DKI Jakarta",
-    desc: "Saya menjadi bagian dari 17 Dewan Pakar tim pemenangan Anies-Sandi pada Pilkada DKI 2017 — yang akhirnya memenangkan kontestasi tersebut.",
-    badge: null,
-  },
-  {
-    period: "2005 – 2016",
-    role: "Managing Director",
-    org: "Kelompok Media Peluang (KMP)",
-    desc: "Selama 11 tahun lebih saya mengelola grup media yang menerbitkan 8 tabloid dan majalah, termasuk Tabloid Peluang Usaha, Tabloid The Politic, dan Majalah Kebaya.",
-    badge: null,
-  },
-  {
-    period: "2012",
-    role: "Koordinator Media & Komunikasi",
-    org: "Tim Kampanye Jokowi-Basuki · Pilgub DKI Jakarta",
-    desc: "Saya menjadi koordinator media center kampanye Jokowi-Basuki pada Pilgub DKI 2012 — momentum yang melambungkan nama Jokowi ke panggung nasional.",
-    badge: null,
-  },
-  {
-    period: "1989 – 1994",
-    role: "Jurnalis",
-    org: "Pers Daerah · Kelompok Kompas Gramedia",
-    desc: "Karier jurnalistik saya dimulai di jaringan Kompas Gramedia, meliput untuk Harian Surya, Harian Bernas, Harian Serambi Indonesia, dan sejumlah media daerah lainnya.",
-    badge: null,
-  },
-];
-
-const services = [
-  {
-    icon: <TrendingUp className="w-7 h-7" />,
-    title: "Pemulihan Citra",
-    desc: "Strategi berbasis Image Restoration Theory untuk memulihkan reputasi yang terdampak krisis media.",
-  },
-  {
-    icon: <Newspaper className="w-7 h-7" />,
-    title: "Manajemen Media",
-    desc: "Pengelolaan hubungan media, press release, dan penempatan narasi di media mainstream maupun digital.",
-  },
-  {
-    icon: <Users className="w-7 h-7" />,
-    title: "Konsultasi Komunikasi",
-    desc: "Pendampingan strategi komunikasi publik untuk tokoh, pejabat, dan organisasi.",
-  },
-  {
-    icon: <Award className="w-7 h-7" />,
-    title: "Pelatihan Jurnalistik",
-    desc: "Workshop dan pelatihan teknik komunikasi, penulisan, serta pemahaman ekosistem media bagi tim dan individu.",
+    label: "YouTube",
+    href: "https://youtube.com",
+    icon: <YouTubeIcon size={18} />,
   },
 ];
 
@@ -121,29 +48,48 @@ export function Home() {
   return (
     <div className="flex-1">
       {/* ── Hero ── */}
-      <section className="relative bg-brand-dark overflow-hidden">
+      <section className="relative bg-brand-mid overflow-hidden">
+        {/* Background decoration */}
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-brand-mid rounded-full -translate-y-1/2 translate-x-1/2" />
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-brand-mid rounded-full translate-y-1/2 -translate-x-1/2" />
+          <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full -translate-y-1/2 translate-x-1/2" />
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-white rounded-full translate-y-1/2 -translate-x-1/2" />
         </div>
 
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Text */}
             <div>
-              <span className="inline-block mb-4 px-3 py-1 bg-brand-mid/20 text-brand-mid text-sm font-medium rounded-full border border-brand-mid/30">
+              <span className="inline-block mb-4 px-3 py-1 bg-white/20 text-white text-sm font-medium rounded-full border border-white/30">
                 Jurnalis & Konsultan Komunikasi
               </span>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-                Budi <span className="text-brand-mid">Purnomo</span>
+                Budi <span className="text-brand-dark">Purnomo</span>
               </h1>
-              <p className="text-blue-200 text-lg md:text-xl leading-relaxed mb-8">
-                Saya adalah wartawan dengan pengalaman puluhan tahun, dan telah
-                mendampingi pemulihan citra sejumlah tokoh nasional. Di sini saya
-                berbagi strategi komunikasi aktual berbasis{" "}
-                <em>Image Restoration Theory</em> — untuk membantu Anda menavigasi
-                krisis reputasi dengan tepat dan terukur.
-              </p>
+              <div className="text-white/90 text-lg md:text-xl leading-relaxed mb-8 space-y-3">
+                <p>
+                  Budi Purnomo adalah wartawan yang berpengalaman puluhan tahun,
+                  dan pernah mengelola manajemen reputasi untuk pemulihan citra
+                  sejumlah tokoh nasional.
+                </p>
+                <p>
+                  Melalui situs ini, ia membagikan solusi, strategi, dan
+                  pandangan komunikasinya berdasarkan prinsip-prinsip teori dan
+                  praktek di lapangan.
+                </p>
+                <p>
+                  Untuk berkonsultasi mengenai seputar media dan komunikasi,
+                  dapat menghubungi{" "}
+                  <a
+                    href="https://wa.me/6285315557788"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-semibold underline underline-offset-2 hover:text-white transition-colors"
+                  >
+                    WhatsApp Center
+                  </a>
+                  .
+                </p>
+              </div>
 
               {/* CTA buttons */}
               <div className="flex flex-wrap gap-3 mb-8">
@@ -151,14 +97,14 @@ export function Home() {
                   href="https://wa.me/6285315557788"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-6 py-3 bg-brand-mid text-white rounded-xl font-semibold hover:bg-blue-600 transition-colors shadow-lg"
+                  className="flex items-center gap-2 px-6 py-3 bg-brand-dark text-white rounded-xl font-semibold hover:bg-blue-950 transition-colors shadow-lg"
                 >
                   <MessageCircle size={18} />
                   Konsultasi via WA
                 </a>
                 <Link
                   to="/blog"
-                  className="flex items-center gap-2 px-6 py-3 bg-white/10 text-white rounded-xl font-semibold hover:bg-white/20 transition-colors border border-white/20"
+                  className="flex items-center gap-2 px-6 py-3 bg-white/15 text-white rounded-xl font-semibold hover:bg-white/25 transition-colors border border-white/30"
                 >
                   Baca Artikel
                   <ChevronRight size={18} />
@@ -167,7 +113,7 @@ export function Home() {
 
               {/* Social media */}
               <div className="flex items-center gap-2 flex-wrap">
-                <span className="text-blue-300 text-sm mr-1">Ikuti saya:</span>
+                <span className="text-white/70 text-sm mr-1">Ikuti saya:</span>
                 {socials.map((s) => (
                   <a
                     key={s.label}
@@ -175,7 +121,7 @@ export function Home() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={s.label}
-                    className="flex items-center justify-center w-9 h-9 rounded-lg bg-white/10 text-blue-200 hover:bg-brand-mid hover:text-white transition-colors border border-white/10"
+                    className="flex items-center justify-center w-9 h-9 rounded-lg bg-white/15 text-white/80 hover:bg-brand-dark hover:text-white transition-colors border border-white/20"
                     title={s.label}
                   >
                     {s.icon}
@@ -187,7 +133,7 @@ export function Home() {
             {/* Profile photo */}
             <div className="flex justify-center md:justify-end">
               <div className="relative">
-                <div className="w-64 h-64 md:w-80 md:h-80 rounded-2xl bg-gradient-to-br from-brand-mid to-brand-dark border-4 border-white/20 overflow-hidden shadow-2xl flex items-center justify-center">
+                <div className="w-64 h-64 md:w-80 md:h-80 rounded-2xl bg-gradient-to-br from-white/20 to-brand-dark border-4 border-white/30 overflow-hidden shadow-2xl flex items-center justify-center">
                   <img
                     src="/profile.jpg"
                     alt="Budi Purnomo"
@@ -214,13 +160,13 @@ export function Home() {
       </section>
 
       {/* ── Stats ── */}
-      <section className="bg-brand-mid py-12">
+      <section className="bg-brand-dark py-12">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {stats.map((s) => (
               <div key={s.label} className="text-center">
                 <p className="text-3xl md:text-4xl font-bold text-white">{s.value}</p>
-                <p className="text-blue-100 text-sm mt-1">{s.label}</p>
+                <p className="text-blue-300 text-sm mt-1">{s.label}</p>
               </div>
             ))}
           </div>
@@ -241,38 +187,45 @@ export function Home() {
               </h2>
               <p className="text-gray-600 leading-relaxed mb-4">
                 Sejak kuliah, Budi Purnomo aktif sebagai koresponden berbagai
-                surat kabar, hingga menjadi wartawan profesional di{" "}
-                <strong className="text-brand-dark">Harian Surya</strong>, Pers
-                Daerah Kelompok Kompas Gramedia (1989–1994).
+                surat kabar, hingga menjadi wartawan profesional di Harian Surya,
+                Pers Daerah Kelompok Kompas Gramedia (1989–1994).
               </p>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Ia kemudian mengelola majalah finansial{" "}
-                <strong className="text-brand-dark">Uang & Efek</strong> yang
-                berubah menjadi <strong className="text-brand-dark">Majalah Investor</strong>{" "}
-                hingga 2000, lalu memimpin majalah investasi mingguan{" "}
-                <strong className="text-brand-dark">Prospektif</strong> hingga
-                2006 — sambil mengelola sejumlah tabloid bisnis dan surat kabar
-                ekonomi hingga 2016.
+                Ia kemudian mengelola majalah finansial Uang &amp; Efek yang
+                berubah menjadi Majalah Investor hingga 2000, lalu memimpin
+                majalah investasi mingguan Prospektif hingga 2006 — sambil
+                mengelola sejumlah tabloid bisnis dan surat kabar ekonomi hingga
+                2016.
               </p>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Di bidang komunikasi politik, ia dipercaya menjadi{" "}
-                <strong className="text-brand-dark">Koordinator Media Center</strong>{" "}
-                kampanye Jokowi–Basuki (Pilgub DKI 2012), Koordinator Prabowo
-                Media Center (2013), Direktur Media Center Timkamnas
-                Prabowo–Hatta (Pilpres 2014), hingga{" "}
-                <strong className="text-brand-dark">Wakil Direktur Media Center</strong>{" "}
-                Timnas Prabowo–Sandiaga mendampingi Hashim Djojohadikusumo
-                (Pilpres 2018–2019).
+                Di bidang komunikasi politik, ia dipercaya menjadi Koordinator
+                Media Center kampanye Jokowi–Basuki (Pilgub DKI 2012),
+                Koordinator Prabowo Media Center (2013), Direktur Media Center
+                Timkamnas Prabowo–Hatta (Pilpres 2014), hingga Wakil Direktur
+                Media Center Timnas Prabowo–Sandiaga mendampingi Hashim
+                Djojohadikusumo (Pilpres 2018–2019).
               </p>
               <p className="text-gray-600 leading-relaxed mb-8">
-                Kini ia aktif membantu korporasi yang mengalami krisis komunikasi,
-                dan mengelola sekitar{" "}
-                <strong className="text-brand-dark">200 portal berita</strong>{" "}
-                melalui{" "}
-                <a href="https://persrilis.com" target="_blank" rel="noopener noreferrer" className="text-brand-mid hover:underline font-medium">Persrilis.com</a>
-                {" "}dan{" "}
-                <a href="https://prorilis.com" target="_blank" rel="noopener noreferrer" className="text-brand-mid hover:underline font-medium">Prorilis.com</a>
-                {" "}— termasuk{" "}
+                Kini ia aktif membantu korporasi yang mengalami krisis
+                komunikasi, dan mengelola sekitar 200 portal berita melalui{" "}
+                <a
+                  href="https://persrilis.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-brand-mid hover:underline font-medium"
+                >
+                  Persrilis.com
+                </a>{" "}
+                dan{" "}
+                <a
+                  href="https://prorilis.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-brand-mid hover:underline font-medium"
+                >
+                  Prorilis.com
+                </a>{" "}
+                — termasuk{" "}
                 <a href="https://hallo.id" target="_blank" rel="noopener noreferrer" className="text-brand-mid hover:underline font-medium">Hallo.id</a>,{" "}
                 <a href="https://bisnisnews.com" target="_blank" rel="noopener noreferrer" className="text-brand-mid hover:underline font-medium">Bisnisnews.com</a>,{" "}
                 <a href="https://24jamnews.com" target="_blank" rel="noopener noreferrer" className="text-brand-mid hover:underline font-medium">24jamnews.com</a>, dan{" "}
@@ -333,73 +286,6 @@ export function Home() {
                   </a>
                 ))}
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Layanan ── */}
-      <section className="py-20 bg-brand-light">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <span className="inline-block mb-3 px-3 py-1 bg-white text-brand-dark text-sm font-medium rounded-full">
-              Layanan
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-brand-dark">
-              Apa yang Saya Tawarkan
-            </h2>
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {services.map((s) => (
-              <div
-                key={s.title}
-                className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow border border-blue-50 group"
-              >
-                <div className="w-14 h-14 rounded-xl bg-brand-light text-brand-mid flex items-center justify-center mb-4 group-hover:bg-brand-mid group-hover:text-white transition-colors">
-                  {s.icon}
-                </div>
-                <h3 className="font-bold text-brand-dark text-lg mb-2">{s.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{s.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Pengalaman ── */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <span className="inline-block mb-3 px-3 py-1 bg-brand-light text-brand-dark text-sm font-medium rounded-full">
-              Rekam Jejak
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-brand-dark">
-              Pengalaman Profesional
-            </h2>
-          </div>
-          <div className="relative">
-            <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-brand-light hidden sm:block" />
-            <div className="space-y-8">
-              {experiences.map((exp, i) => (
-                <div key={i} className="relative sm:pl-16">
-                  <div className="absolute left-4 top-5 w-4 h-4 rounded-full bg-brand-mid border-2 border-white shadow-md hidden sm:block" />
-                  <div className="bg-white rounded-2xl p-6 border border-blue-100 shadow-sm hover:border-brand-mid transition-colors">
-                    <div className="flex flex-wrap items-center gap-2 mb-2">
-                      <span className="px-2.5 py-0.5 bg-brand-light text-brand-dark text-xs font-medium rounded-full">
-                        {exp.period}
-                      </span>
-                      {exp.badge && (
-                        <span className="px-2.5 py-0.5 bg-green-100 text-green-700 text-xs font-semibold rounded-full">
-                          ● {exp.badge}
-                        </span>
-                      )}
-                    </div>
-                    <h3 className="font-bold text-brand-dark text-lg">{exp.role}</h3>
-                    <p className="text-brand-mid text-sm font-medium mb-2">{exp.org}</p>
-                    <p className="text-gray-600 text-sm leading-relaxed">{exp.desc}</p>
-                  </div>
-                </div>
-              ))}
             </div>
           </div>
         </div>

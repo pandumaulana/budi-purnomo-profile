@@ -186,51 +186,45 @@ export function Home() {
                 <span className="text-brand-mid">Berbasis Riset & Pengalaman</span>
               </h2>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Sejak kuliah, Budi Purnomo aktif sebagai koresponden berbagai
-                surat kabar, hingga menjadi wartawan profesional di Harian Surya,
-                Pers Daerah Kelompok Kompas Gramedia (1989–1994).
+                Pada saat kuliah, Budi Purnomo adalah koresponden berbagai surat
+                kabar, hingga akhirnya menjadi wartawan profesional di Harian
+                Surya, Pers Daerah Kelompok Kompas Gramedia (KKG) 1989–1994.
               </p>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Ia kemudian mengelola majalah finansial Uang &amp; Efek yang
-                berubah menjadi Majalah Investor hingga 2000, lalu memimpin
-                majalah investasi mingguan Prospektif hingga 2006 — sambil
-                mengelola sejumlah tabloid bisnis dan surat kabar ekonomi hingga
-                2016.
+                Setelahnya, ia mengelola majalah finansial Uang &amp; Efek yang
+                kemudian berubah menjadi Majalah Investor, hingga tahun 2000.
+                Kemudian ia menjadi pimpinan majalah mingguan investasi
+                Prospektif hingga 2006, sambil mengelola sejumlah tabloid bisnis
+                dan surat kabar ekonomi hingga 2016.
               </p>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Di bidang komunikasi politik, ia dipercaya menjadi Koordinator
-                Media Center kampanye Jokowi–Basuki (Pilgub DKI 2012),
-                Koordinator Prabowo Media Center (2013), Direktur Media Center
-                Timkamnas Prabowo–Hatta (Pilpres 2014), hingga Wakil Direktur
-                Media Center Timnas Prabowo–Sandiaga mendampingi Hashim
-                Djojohadikusumo (Pilpres 2018–2019).
+                Di bidang komunikasi, pada Juli 2012 ia ditunjuk menjadi
+                Koordinator Media Center Tim Kampanye Joko Widodo – Basuki
+                Tjahaja Purnama untuk Pilgub DKI Jakarta. Pada September 2013
+                menjadi Koordinator Prabowo Media Center, dan Mei 2014 menjadi
+                Direktur Media Center Timkamnas Prabowo–Hatta untuk Pilpres RI.
+                Pada September 2018, ia mendampingi Hashim Djojohadikusumo
+                sebagai Wakil Direktur Media Center Timnas Prabowo–Sandiaga.
+              </p>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                Langkahnya di bidang media dan komunikasi sempat terhenti karena
+                sakit, namun dalam keterbatasannya ia berjuang keras dengan
+                penuh semangat untuk bangkit kembali.
               </p>
               <p className="text-gray-600 leading-relaxed mb-8">
-                Kini ia aktif membantu korporasi yang mengalami krisis
-                komunikasi, dan mengelola sekitar 200 portal berita melalui{" "}
-                <a
-                  href="https://persrilis.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-brand-mid hover:underline font-medium"
-                >
-                  Persrilis.com
-                </a>{" "}
-                dan{" "}
-                <a
-                  href="https://prorilis.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-brand-mid hover:underline font-medium"
-                >
-                  Prorilis.com
-                </a>{" "}
-                — termasuk{" "}
+                Kini ia kembali berkiprah — bukan hanya menulis berita, tetapi
+                juga membantu sejumlah korporasi yang mengalami persoalan
+                komunikasi melalui publikasi pers rilis di ratusan portal berita
+                dalam dan luar negeri. Melalui{" "}
+                <a href="https://persrilis.com" target="_blank" rel="noopener noreferrer" className="text-brand-mid hover:underline font-medium">Persrilis.com</a>
+                {" "}dan{" "}
+                <a href="https://prorilis.com" target="_blank" rel="noopener noreferrer" className="text-brand-mid hover:underline font-medium">Prorilis.com</a>
+                , ia mengelola sekitar 200 portal berita — termasuk{" "}
                 <a href="https://hallo.id" target="_blank" rel="noopener noreferrer" className="text-brand-mid hover:underline font-medium">Hallo.id</a>,{" "}
-                <a href="https://bisnisnews.com" target="_blank" rel="noopener noreferrer" className="text-brand-mid hover:underline font-medium">Bisnisnews.com</a>,{" "}
-                <a href="https://24jamnews.com" target="_blank" rel="noopener noreferrer" className="text-brand-mid hover:underline font-medium">24jamnews.com</a>, dan{" "}
-                <a href="https://indonesiaraya.co.id" target="_blank" rel="noopener noreferrer" className="text-brand-mid hover:underline font-medium">Indonesiaraya.co.id</a>{" "}
-                — untuk distribusi pers rilis di dalam dan luar negeri.
+                <a href="https://24jamnews.com" target="_blank" rel="noopener noreferrer" className="text-brand-mid hover:underline font-medium">24jamnews.com</a>,{" "}
+                <a href="https://indonesiaraya.co.id" target="_blank" rel="noopener noreferrer" className="text-brand-mid hover:underline font-medium">Indonesiaraya.co.id</a>,{" "}
+                <a href="https://bisnisnews.com" target="_blank" rel="noopener noreferrer" className="text-brand-mid hover:underline font-medium">Bisnisnews.com</a>,
+                {" "}dan sebagainya.
               </p>
               <div className="flex flex-wrap gap-3">
                 <a

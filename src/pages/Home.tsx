@@ -60,10 +60,11 @@ export function Home() {
             {/* Text */}
             <div>
               <span className="inline-block mb-4 px-3 py-1 bg-white/20 text-white text-sm font-medium rounded-full border border-white/30">
-                Jurnalis & Konsultan Komunikasi
+                Praktisi Media dan Komunikasi
               </span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-                Budi <span className="text-brand-dark">Purnomo</span>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                <span className="text-white">Budi Purnomo</span>{" "}
+                <span className="text-brand-dark">Karjodihardjo</span>
               </h1>
               <div className="text-white/90 text-lg md:text-xl leading-relaxed mb-8 space-y-3">
                 <p>
@@ -179,11 +180,11 @@ export function Home() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <span className="inline-block mb-3 px-3 py-1 bg-brand-light text-brand-dark text-sm font-medium rounded-full">
-                Tentang Saya
+                Tentang Budi Purnomo
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-brand-dark mb-6 leading-tight">
-                Strategi Komunikasi <br />
-                <span className="text-brand-mid">Berbasis Riset & Pengalaman</span>
+                Praktisi Media <br />
+                <span className="text-brand-mid">dan Komunikasi</span>
               </h2>
               <p className="text-gray-600 leading-relaxed mb-4">
                 Pada saat kuliah, Budi Purnomo adalah koresponden berbagai surat
@@ -198,13 +199,37 @@ export function Home() {
                 dan surat kabar ekonomi hingga 2016.
               </p>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Di bidang komunikasi, pada Juli 2012 ia ditunjuk menjadi
-                Koordinator Media Center Tim Kampanye Joko Widodo – Basuki
-                Tjahaja Purnama untuk Pilgub DKI Jakarta. Pada September 2013
-                menjadi Koordinator Prabowo Media Center, dan Mei 2014 menjadi
-                Direktur Media Center Timkamnas Prabowo–Hatta untuk Pilpres RI.
-                Pada September 2018, ia mendampingi Hashim Djojohadikusumo
-                sebagai Wakil Direktur Media Center Timnas Prabowo–Sandiaga.
+                Di bidang komunikasi, pada Juli 2012 ia ditunjuk menjadi{" "}
+                <a
+                  href="https://share.google/NzvUTRUG4gamMMaLR"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-brand-mid hover:underline font-medium"
+                >
+                  Koordinator Media Center
+                </a>{" "}
+                Tim Kampanye Joko Widodo – Basuki Tjahaja Purnama untuk Pilgub
+                DKI Jakarta. Pada September 2013 menjadi Koordinator Prabowo
+                Media Center, dan Mei 2014 menjadi{" "}
+                <a
+                  href="https://m.antaranews.com/berita/437892/rumah-pemenangan-prabowo-hatta-diteror?page=1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-brand-mid hover:underline font-medium"
+                >
+                  Direktur Media Center Timkamnas
+                </a>{" "}
+                Prabowo–Hatta untuk Pilpres RI. Pada September 2018, ia
+                mendampingi Hashim Djojohadikusumo sebagai{" "}
+                <a
+                  href="https://www.antaranews.com/berita/751742/budi-purnomo-dampingi-hashim-pimpin-media-center-prabowo-sandiaga"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-brand-mid hover:underline font-medium"
+                >
+                  Wakil Direktur Media Center Timnas
+                </a>{" "}
+                Prabowo–Sandiaga.
               </p>
               <p className="text-gray-600 leading-relaxed mb-4">
                 Langkahnya di bidang media dan komunikasi sempat terhenti karena

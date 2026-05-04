@@ -10,6 +10,7 @@ export interface WPPost {
     "wp:featuredmedia"?: Array<{
       source_url: string;
       alt_text: string;
+      caption?: { rendered: string };
     }>;
     "wp:term"?: Array<Array<{ name: string; slug: string }>>;
   };

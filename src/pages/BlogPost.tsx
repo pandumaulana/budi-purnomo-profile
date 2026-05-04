@@ -118,11 +118,11 @@ export function BlogPost() {
         {/* CTA */}
         <div className="mt-16 p-8 bg-brand-light rounded-2xl border border-blue-100 text-center">
           <h3 className="text-xl font-bold text-brand-dark mb-2">
-            Ada pertanyaan seputar artikel ini?
+            Ingin bertanya seputar media dan komunikasi?
           </h3>
           <p className="text-gray-600 mb-5">
-            Hubungi Budi Purnomo langsung untuk konsultasi komunikasi dan
-            manajemen reputasi.
+            Hubungi Budi Purnomo langsung untuk konsultasi soal media,
+            komunikasi, dan manajemen reputasi.
           </p>
           <a
             href="https://wa.me/6285315557788"

@@ -194,6 +194,8 @@ export function Home() {
               <p className="text-gray-600 leading-relaxed mb-4">
                 Setelahnya, ia mengelola majalah finansial Uang &amp; Efek yang
                 kemudian berubah menjadi Majalah Investor, hingga tahun 2000.
+              </p>
+              <p className="text-gray-600 leading-relaxed mb-4">
                 Kemudian ia menjadi pimpinan majalah mingguan investasi
                 Prospektif hingga 2006, sambil mengelola sejumlah tabloid bisnis
                 dan surat kabar ekonomi hingga 2016.

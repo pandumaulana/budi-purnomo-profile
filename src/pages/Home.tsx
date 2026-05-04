@@ -214,10 +214,8 @@ export function Home() {
                 DKI Jakarta.
               </p>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Pada September 2013 menjadi Koordinator Prabowo Media Center.
-              </p>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                Pada Mei 2014 menjadi{" "}
+                Pada September 2013 menjadi Koordinator Prabowo Media Center,
+                dan Mei 2014 menjadi{" "}
                 <a
                   href="https://m.antaranews.com/berita/437892/rumah-pemenangan-prabowo-hatta-diteror?page=1"
                   target="_blank"
@@ -246,11 +244,14 @@ export function Home() {
                 sakit, namun dalam keterbatasannya ia berjuang keras dengan
                 penuh semangat untuk bangkit kembali.
               </p>
-              <p className="text-gray-600 leading-relaxed mb-8">
+              <p className="text-gray-600 leading-relaxed mb-4">
                 Kini ia kembali berkiprah — bukan hanya menulis berita, tetapi
                 juga membantu sejumlah korporasi yang mengalami persoalan
                 komunikasi melalui publikasi pers rilis di ratusan portal berita
-                dalam dan luar negeri. Melalui{" "}
+                dalam dan luar negeri.
+              </p>
+              <p className="text-gray-600 leading-relaxed mb-8">
+                Melalui{" "}
                 <a href="https://persrilis.com" target="_blank" rel="noopener noreferrer" className="text-brand-mid hover:underline font-medium">Persrilis.com</a>
                 {" "}dan{" "}
                 <a href="https://prorilis.com" target="_blank" rel="noopener noreferrer" className="text-brand-mid hover:underline font-medium">Prorilis.com</a>

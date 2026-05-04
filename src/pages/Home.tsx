@@ -292,7 +292,7 @@ export function Home() {
               </blockquote>
               <div className="flex items-center gap-3">
                 <img
-                  src="/logofooter.jpeg"
+                  src="/preload.jpeg"
                   alt="Budi Purnomo Karjodihardjo"
                   className="w-12 h-12 rounded-full object-cover flex-shrink-0"
                 />

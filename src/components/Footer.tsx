@@ -10,9 +10,14 @@ const socials = [
   { label: "YouTube", href: "https://youtube.com", icon: <YouTubeIcon size={16} /> },
 ];
 
-const siteLinks = [
+// Baris 1: hanya dua tautan utama
+const mainLinks = [
   { label: "Tentang Budi Purnomo", href: "/#tentang", internal: true },
   { label: "Blog", href: "/blog", internal: true },
+];
+
+// Baris 2: portal & mitra
+const portalLinks = [
   { label: "SapuLangit Media Center", href: "https://jasapr.sapulangit.com/", internal: false },
   { label: "Persrilis.com", href: "https://persrilis.com", internal: false },
   { label: "Prorilis.com", href: "https://prorilis.com", internal: false },
@@ -22,24 +27,37 @@ const siteLinks = [
   { label: "Bisnisnews.com", href: "https://bisnisnews.com", internal: false },
 ];
 
+function NavLink({ link, separator }: { link: { label: string; href: string; internal: boolean }; separator: boolean }) {
+  const cls = "hover:text-white transition-colors";
+  return (
+    <span className="flex items-center">
+      {separator && <span className="mx-2 text-white/30">●</span>}
+      {link.internal
+        ? <Link to={link.href} className={cls}>{link.label}</Link>
+        : <a href={link.href} target="_blank" rel="noopener noreferrer" className={cls}>{link.label}</a>
+      }
+    </span>
+  );
+}
+
 export function Footer() {
   return (
     <footer className="bg-brand-dark text-blue-200">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Brand & info — rata tengah */}
+        {/* Brand & info */}
         <div className="text-center mb-8">
+          {/* Logo + nama — text-lg sama dengan Budi Purnomo */}
           <div className="flex items-center justify-center gap-3 mb-4">
             <img
-              src="/logofooter.jpeg"
+              src="/preload.jpeg"
               alt="Budi Purnomo"
               className="h-9 w-9 rounded-full object-cover"
-              onError={(e) => {
-                (e.target as HTMLImageElement).style.display = "none";
-              }}
+              onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
             />
             <span className="font-bold text-white text-lg">Budi Purnomo</span>
           </div>
-          <p className="text-sm leading-relaxed mb-5 max-w-md mx-auto">
+          {/* Deskripsi — text-base */}
+          <p className="text-base leading-relaxed mb-5 max-w-md mx-auto">
             Wartawan senior & konsultan manajemen reputasi. Ahli pemulihan
             citra berbasis <em>Image Restoration Theory</em>.
           </p>
@@ -61,56 +79,50 @@ export function Footer() {
             ))}
           </div>
 
-          {/* Kontak heading + links */}
-          <p className="text-white font-semibold text-sm mb-3">Kontak</p>
-          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm">
+          {/* Kontak — heading text-lg sama dengan Budi Purnomo */}
+          <p className="font-bold text-white text-lg mb-3">Kontak</p>
+          {/* Link kontak — text-base */}
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-base">
             <a
               href="https://wa.me/6285315557788"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1.5 hover:text-white transition-colors"
             >
-              <MessageCircle size={14} />
+              <MessageCircle size={15} />
               WA Center: 0853-1555-7788
             </a>
             <a
               href="mailto:hallobudipurnomo@gmail.com"
               className="flex items-center gap-1.5 hover:text-white transition-colors"
             >
-              <Mail size={14} />
+              <Mail size={15} />
               hallobudipurnomo@gmail.com
             </a>
           </div>
         </div>
 
-        {/* Navigasi + Links bar */}
+        {/* Navigasi — heading text-lg sama dengan Budi Purnomo */}
         <div className="border-t border-white/10 pt-6 mb-4">
-          <p className="text-center text-white font-semibold text-sm mb-3">Navigasi</p>
-          <div className="flex flex-wrap justify-center items-center gap-y-2 text-xs text-blue-300">
-            {siteLinks.map((link, i) => (
-              <span key={link.label} className="flex items-center">
-                {i > 0 && <span className="mx-2 text-white/30">●</span>}
-                {link.internal ? (
-                  <Link to={link.href} className="hover:text-white transition-colors">
-                    {link.label}
-                  </Link>
-                ) : (
-                  <a
-                    href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-white transition-colors"
-                  >
-                    {link.label}
-                  </a>
-                )}
-              </span>
+          <p className="text-center font-bold text-white text-lg mb-3">Navigasi</p>
+
+          {/* Baris 1: Tentang Budi Purnomo ● Blog — text-base */}
+          <div className="flex flex-wrap justify-center items-center gap-y-1 text-base text-blue-300 mb-2">
+            {mainLinks.map((link, i) => (
+              <NavLink key={link.label} link={link} separator={i > 0} />
+            ))}
+          </div>
+
+          {/* Baris 2: SapuLangit dst — text-sm */}
+          <div className="flex flex-wrap justify-center items-center gap-y-1 text-sm text-blue-300">
+            {portalLinks.map((link, i) => (
+              <NavLink key={link.label} link={link} separator={i > 0} />
             ))}
           </div>
         </div>
 
         {/* Copyright */}
-        <div className="text-center text-xs text-blue-300 pt-4 border-t border-white/10">
+        <div className="text-center text-sm text-blue-300 pt-4 border-t border-white/10">
           <p>
             © {new Date().getFullYear()} Budi Purnomo. Hak cipta dilindungi. · In association with{" "}
             <a

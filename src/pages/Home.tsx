@@ -275,17 +275,19 @@ export function Home() {
             <div className="bg-brand-light rounded-2xl p-8 border border-blue-100">
               <div className="text-6xl text-brand-mid font-serif leading-none mb-4">"</div>
               <blockquote className="text-brand-dark text-xl font-medium leading-relaxed mb-6 italic">
-                Pemulihan citra bukan sekadar strategi PR — ini adalah sains
-                komunikasi yang membutuhkan diagnosis tepat dan pendekatan yang
-                terukur.
+                Pemulihan citra bukan sekedar strategi PR — manajemen reputasi
+                adalah sains komunikasi yang membutuhkan diagnosis tepat dan
+                pendekatan yang terukur.
               </blockquote>
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full bg-brand-dark flex items-center justify-center text-white font-bold text-lg">
-                  BP
+                <div className="w-12 h-12 rounded-full bg-brand-dark flex items-center justify-center text-white">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                  </svg>
                 </div>
                 <div>
-                  <p className="font-semibold text-brand-dark">Budi Purnomo</p>
-                  <p className="text-sm text-gray-500">Konsultan Komunikasi & Wartawan Senior</p>
+                  <p className="font-semibold text-brand-dark">Budi Purnomo Karjodihardjo</p>
+                  <p className="text-sm text-gray-500">Praktisi Media dan Komunikasi</p>
                 </div>
               </div>
               {/* Social in about card */}

@@ -41,7 +41,7 @@ const stats = [
   { value: "30+", label: "Tahun Pengalaman" },
   { value: "50+", label: "Tokoh Nasional Dilayani" },
   { value: "100+", label: "Kasus Pemulihan Citra" },
-  { value: "500+", label: "Artikel Dipublikasikan" },
+  { value: "1500+", label: "Artikel Dipublikasikan" },
 ];
 
 export function Home() {
@@ -211,8 +211,13 @@ export function Home() {
                   Koordinator Media Center
                 </a>{" "}
                 Tim Kampanye Joko Widodo – Basuki Tjahaja Purnama untuk Pilgub
-                DKI Jakarta. Pada September 2013 menjadi Koordinator Prabowo
-                Media Center, dan Mei 2014 menjadi{" "}
+                DKI Jakarta.
+              </p>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                Pada September 2013 menjadi Koordinator Prabowo Media Center.
+              </p>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                Pada Mei 2014 menjadi{" "}
                 <a
                   href="https://m.antaranews.com/berita/437892/rumah-pemenangan-prabowo-hatta-diteror?page=1"
                   target="_blank"
@@ -221,8 +226,11 @@ export function Home() {
                 >
                   Direktur Media Center Timkamnas
                 </a>{" "}
-                Prabowo–Hatta untuk Pilpres RI. Pada September 2018, ia
-                mendampingi Hashim Djojohadikusumo sebagai{" "}
+                Prabowo–Hatta untuk Pilpres RI.
+              </p>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                Pada September 2018, ia mendampingi Hashim Djojohadikusumo
+                sebagai{" "}
                 <a
                   href="https://www.antaranews.com/berita/751742/budi-purnomo-dampingi-hashim-pimpin-media-center-prabowo-sandiaga"
                   target="_blank"
@@ -283,7 +291,7 @@ export function Home() {
               </blockquote>
               <div className="flex items-center gap-3">
                 <img
-                  src="/profil.jpeg"
+                  src="/logofooter.jpeg"
                   alt="Budi Purnomo Karjodihardjo"
                   className="w-12 h-12 rounded-full object-cover flex-shrink-0"
                 />

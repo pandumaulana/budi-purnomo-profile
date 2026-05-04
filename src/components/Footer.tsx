@@ -13,7 +13,7 @@ const socials = [
 const siteLinks = [
   { label: "Tentang Budi Purnomo", href: "/#tentang", internal: true },
   { label: "Blog", href: "/blog", internal: true },
-  { label: "SapuLangit", href: "https://sapulangit.com", internal: false },
+  { label: "SapuLangit Media Center", href: "https://jasapr.sapulangit.com/", internal: false },
   { label: "Persrilis.com", href: "https://persrilis.com", internal: false },
   { label: "Prorilis.com", href: "https://prorilis.com", internal: false },
   { label: "Hallo.id", href: "https://hallo.id", internal: false },
@@ -30,9 +30,9 @@ export function Footer() {
         <div className="text-center mb-8">
           <div className="flex items-center justify-center gap-3 mb-4">
             <img
-              src="/logo.png"
+              src="/logofooter.jpeg"
               alt="Budi Purnomo"
-              className="h-9 w-auto object-contain"
+              className="h-9 w-9 rounded-full object-cover"
               onError={(e) => {
                 (e.target as HTMLImageElement).style.display = "none";
               }}
@@ -61,14 +61,8 @@ export function Footer() {
             ))}
           </div>
 
-          {/* Navigasi — inline/sejajar */}
-          <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm mb-5">
-            <Link to="/" className="hover:text-white transition-colors">Beranda</Link>
-            <Link to="/blog" className="hover:text-white transition-colors">Blog</Link>
-            <Link to="/#tentang" className="hover:text-white transition-colors">Tentang Saya</Link>
-          </nav>
-
-          {/* Kontak */}
+          {/* Kontak heading + links */}
+          <p className="text-white font-semibold text-sm mb-3">Kontak</p>
           <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm">
             <a
               href="https://wa.me/6285315557788"
@@ -89,8 +83,9 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Links bar */}
+        {/* Navigasi + Links bar */}
         <div className="border-t border-white/10 pt-6 mb-4">
+          <p className="text-center text-white font-semibold text-sm mb-3">Navigasi</p>
           <div className="flex flex-wrap justify-center items-center gap-y-2 text-xs text-blue-300">
             {siteLinks.map((link, i) => (
               <span key={link.label} className="flex items-center">

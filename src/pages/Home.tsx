@@ -136,7 +136,7 @@ export function Home() {
               <div className="relative">
                 <div className="w-64 h-64 md:w-80 md:h-80 rounded-2xl bg-gradient-to-br from-white/20 to-brand-dark border-4 border-white/30 overflow-hidden shadow-2xl flex items-center justify-center">
                   <img
-                    src="/profile.jpg"
+                    src="/profil.jpeg"
                     alt="Budi Purnomo"
                     className="w-full h-full object-cover"
                     onError={(e) => {

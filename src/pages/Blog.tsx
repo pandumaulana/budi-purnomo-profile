@@ -12,6 +12,13 @@ export function Blog() {
       {/* Header */}
       <div className="bg-brand-dark py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="flex justify-center mb-6">
+            <img
+              src="/logoblog.png"
+              alt="Logo Blog"
+              className="h-16 w-auto object-contain"
+            />
+          </div>
           <span className="inline-block mb-3 px-3 py-1 bg-brand-mid/20 text-brand-mid text-sm font-medium rounded-full border border-brand-mid/30">
             Blog & Insights
           </span>

@@ -54,7 +54,7 @@ export function Footer() {
               className="h-9 w-9 rounded-full object-cover"
               onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
             />
-            <span className="font-bold text-white text-lg">Budi Purnomo</span>
+            <span className="font-bold text-white text-xl">Budi Purnomo</span>
           </div>
           {/* Deskripsi — text-base */}
           <p className="text-base leading-relaxed mb-5 max-w-md mx-auto">
@@ -80,7 +80,7 @@ export function Footer() {
           </div>
 
           {/* Kontak — heading text-lg sama dengan Budi Purnomo */}
-          <p className="font-bold text-white text-lg mb-3">Kontak</p>
+          <p className="font-bold text-white text-xl mb-3">Kontak</p>
           {/* Link kontak — text-base */}
           <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-base">
             <a
@@ -104,7 +104,7 @@ export function Footer() {
 
         {/* Navigasi — heading text-lg sama dengan Budi Purnomo */}
         <div className="border-t border-white/10 pt-6 mb-4">
-          <p className="text-center font-bold text-white text-lg mb-3">Navigasi</p>
+          <p className="text-center font-bold text-white text-xl mb-3">Navigasi</p>
 
           {/* Baris 1: Tentang Budi Purnomo ● Blog */}
           <div className="flex flex-wrap justify-center items-center gap-y-1 text-base text-blue-200 mb-2">

@@ -93,7 +93,7 @@ export function Home() {
               </div>
 
               {/* CTA buttons */}
-              <div className="flex flex-wrap gap-3 mb-8">
+              <div className="flex flex-wrap justify-center gap-3 mb-8">
                 <a
                   href="https://wa.me/6285315557788"
                   target="_blank"
@@ -262,7 +262,7 @@ export function Home() {
                 <a href="https://bisnisnews.com" target="_blank" rel="noopener noreferrer" className="text-brand-mid hover:underline font-medium">Bisnisnews.com</a>,
                 {" "}dan sebagainya.
               </p>
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap justify-center gap-3">
                 <a
                   href="https://wa.me/6285315557788"
                   target="_blank"

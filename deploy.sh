@@ -3,7 +3,7 @@ set -e
 
 # ── Konfigurasi ─────────────────────────────────────
 REPO_DIR="/var/www/budi-purnomo-profile"   # Folder clone repo di VPS
-WEB_ROOT="/var/www/budipurnomo.com/html"   # Folder yang dibaca Nginx
+WEB_ROOT="/var/www/budipurnomo.com"        # Folder yang dibaca Nginx
 BRANCH="main"
 # ────────────────────────────────────────────────────
 

@@ -182,7 +182,7 @@ export function Home() {
               <span className="inline-block mb-3 px-3 py-1 bg-brand-light text-brand-dark text-sm font-medium rounded-full">
                 Tentang Budi Purnomo
               </span>
-              <h2 className="text-3xl md:text-4xl font-bold text-brand-dark mb-6 leading-tight">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-dark mb-6 leading-tight">
                 Praktisi Media <br />
                 <span className="text-brand-mid">dan Komunikasi</span>
               </h2>
@@ -292,7 +292,7 @@ export function Home() {
               </blockquote>
               <div className="flex items-center gap-3">
                 <img
-                  src="/preload.jpeg"
+                  src="/update.jpeg"
                   alt="Budi Purnomo Karjodihardjo"
                   className="w-12 h-12 rounded-full object-cover flex-shrink-0"
                 />

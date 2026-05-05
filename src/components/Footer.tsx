@@ -49,7 +49,7 @@ export function Footer() {
           {/* Logo + nama — text-lg sama dengan Budi Purnomo */}
           <div className="flex items-center justify-center gap-3 mb-4">
             <img
-              src="/preload.jpeg"
+              src="/update.jpeg"
               alt="Budi Purnomo"
               className="h-9 w-9 rounded-full object-cover"
               onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
@@ -106,15 +106,15 @@ export function Footer() {
         <div className="border-t border-white/10 pt-6 mb-4">
           <p className="text-center font-bold text-white text-lg mb-3">Navigasi</p>
 
-          {/* Baris 1: Tentang Budi Purnomo ● Blog — text-base */}
-          <div className="flex flex-wrap justify-center items-center gap-y-1 text-base text-blue-300 mb-2">
+          {/* Baris 1: Tentang Budi Purnomo ● Blog */}
+          <div className="flex flex-wrap justify-center items-center gap-y-1 text-base text-blue-200 mb-2">
             {mainLinks.map((link, i) => (
               <NavLink key={link.label} link={link} separator={i > 0} />
             ))}
           </div>
 
-          {/* Baris 2: SapuLangit dst — text-sm */}
-          <div className="flex flex-wrap justify-center items-center gap-y-1 text-sm text-blue-300">
+          {/* Baris 2: SapuLangit dst */}
+          <div className="flex flex-wrap justify-center items-center gap-y-1 text-base text-blue-200">
             {portalLinks.map((link, i) => (
               <NavLink key={link.label} link={link} separator={i > 0} />
             ))}

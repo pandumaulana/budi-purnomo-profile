@@ -14,9 +14,9 @@ function Preloader({ visible }: { visible: boolean }) {
       }`}
     >
       <img
-        src="/preload.jpeg"
+        src="/ikon.jpeg"
         alt="Loading"
-        className="w-24 h-24 object-contain animate-pulse rounded-xl"
+        className="w-36 h-36 object-contain animate-pulse rounded-xl"
       />
     </div>
   );
